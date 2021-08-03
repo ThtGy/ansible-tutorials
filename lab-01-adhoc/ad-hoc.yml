@@ -1,26 +1,26 @@
- hosts: node01
-  gather_facts: true
-  become: true
-  vars:
-    httpd_port: 8080
-  tasks:
-    - first:
-      - name: Make directory
-        shell: mkdir -p /home/ec2-user/testdirAnsible
-      - name: Copy inventory
-        ansible.builtin.copy:
-          src: inventory/ansible-nodes
-          dest: /tmp/ansible-nodes
-      - name: Cat
-        shell: cat /tmp/ansible-nodes
-      - name: httpd check
-          pkg: httpd
-          state: installed
-      -name: Git check
-          pkg: git
-          state: installed
-      -name: Git repo
-          ansible.builtin.git:
-            repo: https://github.com/becloudready/prometheus_monitoring.git
-            dest: /tmp1
-            version: HEAD
+ - hosts: node01
+   gather_facts: true
+   become: true
+   vars:
+     httpd_port: 8080
+   tasks:
+     - first:
+       - name: Make directory
+         shell: mkdir -p /home/ec2-user/testdirAnsible
+       - name: Copy inventory
+         ansible.builtin.copy:
+           src: inventory/ansible-nodes
+           dest: /tmp/ansible-nodes
+       - name: Cat
+         shell: cat /tmp/ansible-nodes
+       - name: httpd check
+           pkg: httpd
+           state: installed
+       - name: Git check
+           pkg: git
+           state: installed
+       - name: Git repo
+           ansible.builtin.git:
+             repo: https://github.com/becloudready/prometheus_monitoring.git
+             dest: /tmp1
+             version: HEAD
