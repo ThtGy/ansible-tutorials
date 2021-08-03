@@ -5,8 +5,9 @@
 
   tasks:
   - name: Install OpenJDK
-    apt:
+    package:
       name: openjdk-11-jre-headless
+      state: present
 
   - name: download tomcat server packages
     get_url:
