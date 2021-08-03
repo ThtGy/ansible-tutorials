@@ -40,4 +40,4 @@
         state: directory
     
     - name: Copy readme
-      shell: src=README.md dest=/tmp1
+      copy: src=README.md dest=/tmp1
