@@ -1,0 +1,8 @@
+- hosts: node01
+  gather_facts: true
+  vars_prompt:
+    name: input
+    prompt: Enter input
+    private: no
+  tasks:
+    - debug: input
