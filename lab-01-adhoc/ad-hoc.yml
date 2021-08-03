@@ -22,7 +22,7 @@
         state: present
 
     - name: Git_repo
-      ansible.builtin.git:
+      git:
         repo: https://github.com/becloudready/prometheus_monitoring.git
         dest: /tmp1
         version: HEAD
