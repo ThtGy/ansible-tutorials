@@ -24,5 +24,4 @@
     - name: Git_repo
       git:
         repo: https://github.com/becloudready/prometheus_monitoring.git
-        dest: /tmp1
-        version: HEAD
+        dest: /tmp1 version=HEAD
