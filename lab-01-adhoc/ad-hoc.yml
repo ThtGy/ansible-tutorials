@@ -31,7 +31,7 @@
         state: present
 
     - service:
-        pkg: nginx
+        name: nginx
         state: started
         enabled: yes
     
