@@ -15,11 +15,11 @@
     - name: Cat
       shell: cat /tmp/ansible-nodes
 
-    - name: httpd_check
+    - yum:
       pkg: httpd
       state: installed
 
-    - name: Git_check
+    - yum:
       pkg: git
       state: installed
 
