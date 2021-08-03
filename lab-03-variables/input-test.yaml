@@ -11,7 +11,8 @@
       user:
         name: "{{input}}"
     - file:
-        path: /tmp/"{{input}}".txt
+        path: /tmp/{{input}}.txt
+        state: touch
         mode: 644
     - debug:
         var: ansible_default_ipv4.address
