@@ -8,18 +8,18 @@
       shell: mkdir -p /home/ec2-user/testdirAnsible
 
     - name: Copy inventory
-      copy: src=inventory/ansible-nodes dest=/tmp/ansible-nodes
+      copy: src=../inventory/ansible-nodes dest=/tmp/ansible-nodes
 
     - name: Cat
       shell: cat /tmp/ansible-nodes
 
     - yum:
         pkg: httpd
-        state: installed
+        state: present
 
     - yum:
         pkg: git
-        state: installed
+        state: present
 
     - name: Git_repo
       ansible.builtin.git:
