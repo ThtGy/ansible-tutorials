@@ -5,4 +5,5 @@
     prompt: Enter input
     private: no
   tasks:
-    - debug: input
+    - debug:
+      var: input
