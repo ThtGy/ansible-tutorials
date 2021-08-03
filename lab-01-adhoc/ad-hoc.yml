@@ -8,9 +8,7 @@
       shell: mkdir -p /home/ec2-user/testdirAnsible
 
     - name: Copy inventory
-      ansible.builtin.copy:
-        src: inventory/ansible-nodes
-        dest: /tmp/ansible-nodes
+      copy: src=inventory/ansible-nodes dest=/tmp/ansible-nodes
 
     - name: Cat
       shell: cat /tmp/ansible-nodes
