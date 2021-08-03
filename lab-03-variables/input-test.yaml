@@ -6,4 +6,4 @@
     private: no
   tasks:
     - debug:
-      var: input
+        var: input
