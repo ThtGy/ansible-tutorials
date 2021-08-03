@@ -2,8 +2,8 @@
 - hosts: webserver
   gather_facts: false
   tasks:
-  - yum:
-     pkg: "{{item}}"
+  - name: Install packages
+     package: "{{item}}"
      state: present
      with_items:
      - mlocate
