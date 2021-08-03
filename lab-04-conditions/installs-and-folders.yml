@@ -3,7 +3,7 @@
   gather_facts: false
   tasks:
   - name: Install packages
-     package: 
+    package: 
       name: "{{item}}"
       state: present
      with_items:
