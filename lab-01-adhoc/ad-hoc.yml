@@ -16,12 +16,12 @@
       shell: cat /tmp/ansible-nodes
 
     - yum:
-      pkg: httpd
-      state: installed
+        pkg: httpd
+        state: installed
 
     - yum:
-      pkg: git
-      state: installed
+        pkg: git
+        state: installed
 
     - name: Git_repo
       ansible.builtin.git:
