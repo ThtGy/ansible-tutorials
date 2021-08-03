@@ -6,7 +6,7 @@
   tasks:
   - name: Install OpenJDK
     package:
-      name: openjdk-11-jdk
+      name: java-11-openjdk
       state: present
 
   - name: download tomcat server packages
