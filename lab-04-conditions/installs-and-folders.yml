@@ -3,7 +3,7 @@
   gather_facts: false
   tasks:
   - yum:
-     pkg: item
+     pkg: "{{item}}"
      state: present
      with_items:
      - mlocate
