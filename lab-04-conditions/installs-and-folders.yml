@@ -10,7 +10,7 @@
      - mlocate
      - strace
      - java-1.8.0-openjdk
-     - php 5
+     - php5
   
   - name: Create folders
     shell: mkdir -p /home/ec2-user/{{item}}
