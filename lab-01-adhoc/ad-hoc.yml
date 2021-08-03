@@ -14,13 +14,13 @@
        - name: Cat
          shell: cat /tmp/ansible-nodes
        - name: httpd check
-           pkg: httpd
-           state: installed
+          pkg: httpd
+          state: installed
        - name: Git check
-           pkg: git
-           state: installed
+          pkg: git
+          state: installed
        - name: Git repo
-           ansible.builtin.git:
-             repo: https://github.com/becloudready/prometheus_monitoring.git
-             dest: /tmp1
-             version: HEAD
+          ansible.builtin.git:
+            repo: https://github.com/becloudready/prometheus_monitoring.git
+            dest: /tmp1
+            version: HEAD
