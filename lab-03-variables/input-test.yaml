@@ -9,11 +9,11 @@
         var: input
     - name: Create user
       user:
-        name: {{input}}
+        name: "{{input}}"
     - file:
-        path: /tmp/{{input}}.txt
+        path: /tmp/"{{input}}".txt
         mode: 644
     - debug:
         var: ansible_default_ipv4.address
     - name: Change hostname
-      shell: hostname {{input}}
+      shell: hostname "{{input}}"
