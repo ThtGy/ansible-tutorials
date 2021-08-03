@@ -1,11 +1,9 @@
 ---
-- name: install wget
-  yum:
+- yum:
     name: wget
     state: present
 
-- name: install openjdk
-  yum:
+- yum:
     name: java-1.8.0-openjdk
     state: present
 
@@ -19,8 +17,7 @@
     state: present
     key: https://jenkins-ci.org/redhat/jenkins-ci.org.key
 
-- name: install jenkins
-  yum:
+- yum:
     name: jenkins
     state: present
 
