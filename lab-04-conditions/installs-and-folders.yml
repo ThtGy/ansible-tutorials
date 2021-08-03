@@ -3,7 +3,7 @@
   gather_facts: false
   tasks:
   - name: Install packages
-    - yum:
+   - yum:
       pkg: item
       with_items:
       - mlocate
