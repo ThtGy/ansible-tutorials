@@ -15,15 +15,15 @@
     - name: Cat
       shell: cat /tmp/ansible-nodes
 
-    - name: httpd check
+    - name: httpd_check
       pkg: httpd
       state: installed
 
-    - name: Git check
+    - name: Git_check
       pkg: git
       state: installed
-      
-    - name: Git repo
+
+    - name: Git_repo
       ansible.builtin.git:
         repo: https://github.com/becloudready/prometheus_monitoring.git
         dest: /tmp1
