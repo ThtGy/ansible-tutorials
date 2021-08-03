@@ -1,14 +1,15 @@
 ---
-- hosts: node01
+- hosts: webserver
   gather_facts: false
   tasks:
   - name: Install packages
-    pkg: item
-    with_items:
-    - mlocate
-    - strace
-    - java 8
-    - php 5
+    - yum:
+      pkg: item
+      with_items:
+      - mlocate
+      - strace
+      - java 8
+      - php 5
   
   - name: Create folders
     shell: mkdir -p /home/ec2-user/{{item}}
