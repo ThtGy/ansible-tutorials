@@ -1,9 +1,19 @@
 ---
-- yum:
+- name: Install Jenkins
+  hosts: node01
+  gather_facts: false
+  become: true
+  tasks:
+  - import_role:
+      name: jenkins
+---
+- name: install wget
+  yum:
     name: wget
     state: present
 
-- yum:
+- name: install openjdk
+  yum:
     name: java-1.8.0-openjdk
     state: present
 
@@ -17,7 +27,8 @@
     state: present
     key: https://jenkins-ci.org/redhat/jenkins-ci.org.key
 
-- yum:
+- name: install jenkins
+  yum:
     name: jenkins
     state: present
 
