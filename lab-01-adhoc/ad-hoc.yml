@@ -25,3 +25,19 @@
       git:
         repo: https://github.com/becloudready/prometheus_monitoring.git
         dest: /tmp1 version=HEAD
+    
+    - yum:
+        pkg: nginx
+        state: present
+
+    - service:
+        pkg: nginx
+        state: started
+        enabled: yes
+    
+    - file:
+        path: /home/ec2-user/usingAnsible
+        state: directory
+    
+    - name: Copy readme
+      shell: src=README.md dest=/tmp1
