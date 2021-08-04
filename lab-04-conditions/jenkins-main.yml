@@ -45,7 +45,7 @@
     delegate_to: localhost
 
   - name: init password jenkin
-    shell: cat var/lib/jenkins_home/secrets/initialAdminPassword
+    shell: cat ../var/lib/jenkins_home/secrets/initialAdminPassword
     changed_when: false
     register: result
 
