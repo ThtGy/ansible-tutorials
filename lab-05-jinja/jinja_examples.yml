@@ -1,16 +1,11 @@
 - hosts: webservers
   vars:
-    user_name: Chandan
+    user_name: Paul
   tasks:
     - template:
-        src: example-template.j2
+        src: httpd.conf.j2
         dest: /tmp/jinta-output
     - debug: var=play_hosts
-
-- hosts: webservers
-  vars:
-    user_name: Chandan
-  tasks:
-    - template:
-        src: example-template-2.j2
-        dest: /tmp/jinta-loop-output
+    - service:
+        name: httpd
+        state: restarted
