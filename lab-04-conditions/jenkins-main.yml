@@ -4,8 +4,6 @@
   gather_facts: false
   become: true
   tasks:
-  - import_role:
-      name: jenkins
 
   - name: install wget
     yum:
