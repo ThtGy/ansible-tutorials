@@ -1,6 +1,8 @@
 ---
-- hosts: webservers
+- hosts: webserver
   become: true
+  vars:
+    env: dev
   roles:
     - ntp
     - httpd
